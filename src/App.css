@@ -1,4 +1,5 @@
-.App {
+.App,
+body {
   min-height: 100vh;
   background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
 }
@@ -8,12 +9,41 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .search-bar {
-  width: 50%;
+  flex: 2 0 250px;
+}
+
+.search-button {
+  flex: 1 0 90px;
+}
+
+.ingredient-list {
+  width: 80%;
+  padding: 1%;
+  height: 90%;
+  overflow-y: scroll;
+  border: 1px solid #f8d0d3;
+  border-radius: 5px;
+}
+
+.ingredient-list li {
+  padding-bottom: 1%;
+}
+
+/* .recipes {
+  display: flex;
+  width: 550px;
+  flex-wrap: wrap;
+} */
+
+.search-bar {
+  /* width: 50%; */
   border: none;
   padding: 10px;
+  font-size: 20px;
 }
 
 .search-button {
@@ -21,10 +51,26 @@
   border: none;
   padding: 10px 20px;
   color: white;
+  font-size: 20px;
 }
 
-.recipes {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.search-button:hover {
+  background: coral;
+  cursor: pointer;
+}
+
+@media (max-width: 650px) {
+  .search-bar {
+    /* width: 50%; */
+    /* border-radius: 5px; */
+    /* padding: 10px; */
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 790px) {
+  img {
+    height: 100px;
+    width: 100px;
+  }
 }
